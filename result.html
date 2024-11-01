@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Classification Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Modern font */
+            background: linear-gradient(to right,#FFEFBA, #F3E1D5); /* Gradient background */
+            color: #333; /* White text for better contrast */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Larger font for the title */
+            margin-bottom: 20px; /* Spacing below the title */
+            color: #4CAF50; /* Bright yellow color for the title */
+        }
+
+        p {
+            font-size: 1.5em; /* Font size for predicted flower */
+            margin-bottom: 30px; /* Spacing below the predicted flower */
+        }
+
+        img {
+            max-width: 300px; /* Limit image width */
+            height: auto; /* Auto height */
+            border: 5px solid #f6d6c1; /* Yellow border for the image */
+            border-radius: 10px; /* Rounded corners for the image */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Shadow for the image */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from link */
+            color: black; /* Bright yellow color for link */
+            font-size: 1.2em; /* Font size for the link */
+            border: 2px solid #f6d6c1; /* Border for link */
+            padding: 10px 20px; /* Padding inside the link */
+            border-radius: 5px; /* Rounded corners for the link */
+            transition: background-color 0.3s; /* Smooth transition for background */
+        }
+
+        a:hover {
+            background-color:rgba(255, 218, 185, 0.8); /* Light yellow on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flower Classification Result</h1>
+    <p>Predicted Flower: {{ flower }}</p>
+
+    <!-- Show the uploaded image -->
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+
+    <br>
+    <a href="/">Upload another image</a>
+</body>
+</html>

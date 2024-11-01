@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Use a modern font */
+            background: linear-gradient(to right, #FFEFBA, #F3E1D5); /* Stylish gradient background */
+            color: #333; /* Text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-size: cover; /* Cover the entire background */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Larger font for the title */
+            margin-bottom: 20px; /* Spacing below the title */
+            color: #4CAF50; /* Green color for the title */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for the title */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            padding: 30px; /* Inner spacing for the form */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            text-align: center; /* Center text in form */
+            max-width: 400px; /* Limit width of the form */
+            width: 100%; /* Full width until max-width */
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px; /* Spacing below the file input */
+            padding: 10px; /* Padding inside file input */
+            border: 1px solid #ccc; /* Border for file input */
+            border-radius: 5px; /* Rounded corners */
+            width: calc(100% - 22px); /* Full width minus padding/border */
+        }
+
+        button {
+            background-color: #4CAF50; /* Green button */
+            color: white; /* White text for button */
+            border: none; /* No border */
+            padding: 10px 20px; /* Padding inside button */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 1em; /* Button text size */
+            transition: background-color 0.3s; /* Smooth transition for background */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Responsive title size */
+            }
+
+            form {
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Flower Classifier</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <br>
+        <button type="submit">Classify</button>
+    </form>
+</body>
+</html>
